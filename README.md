@@ -1,1 +1,0 @@
-# minju25kim-client
