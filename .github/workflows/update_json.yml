@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # Ensure GITHUB_TOKEN has write permission for repository contents
   pages: write
   id-token: write
 
