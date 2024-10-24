@@ -2,6 +2,8 @@ name: CI/CD for Markdown Site
 
 on:
   push:
+    paths:
+      - 'public/md/**'
     branches:
       - main
 
