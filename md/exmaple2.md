@@ -1,12 +1,9 @@
 ---
 
-title: "How to Build a Simple Markdown Renderer in JavaScript"
-
-date: 2024-10-24
-
-author: "Minju Kim"
-
-tags: [JavaScript, Markdown, Web Development]
+- title: "How to Build a Simple Markdown Renderer in JavaScript"
+- date: 2024-10-24
+- author: "Minju Kim"
+- tags: [JavaScript, Markdown, Web Development]
 
 ---
 
