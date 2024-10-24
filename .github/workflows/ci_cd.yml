@@ -17,9 +17,6 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        persist-credentials: false
 
     - name: Set up Python 3
       uses: actions/setup-python@v4
@@ -49,8 +46,21 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+    # Install any dependencies for site generation (optional, e.g., Jekyll)
+    - name: Set up Node.js for any dependencies
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install Dependencies
+      run: npm install  # This step is optional, adjust to fit your project needs
+
+    - name: Build Static Site
+      run: npm run build  # Or another command that builds your static website
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+        publish_dir: ./public  # Adjust to point to the directory where your built HTML files are
+
