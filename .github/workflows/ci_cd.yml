@@ -32,13 +32,9 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
-
-        # Pull the latest changes to avoid conflicts
-        git pull origin main --rebase
-        
-        # Stage, commit, and push the changes
         git add .
         git commit -m "Update mdFiles.json automatically" || echo "No changes to commit"
+        git pull origin main --rebase
         git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
