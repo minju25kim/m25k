@@ -1,0 +1,50 @@
+name: CI/CD for Markdown Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-markdown-list:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python environment
+    - name: Set up Python 3
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    # Step 3: Run Python script to generate md_files.json
+    - name: Run Python Script
+      run: |
+        python ./script/generate_file_list.py
+
+    # Step 4: Commit and push the updated md_files.json
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add public/md_files.json
+        git commit -m "Update md_files.json with new Markdown files"
+        git push
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: update-markdown-list
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # Step 2: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # Specify the directory to deploy
