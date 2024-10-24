@@ -19,6 +19,9 @@ jobs:
   update-mdFiles:
     runs-on: ubuntu-latest
 
+    outputs:
+      md_changed: ${{ steps.check_md_json.outputs.md_changed }}
+
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
@@ -34,7 +37,18 @@ jobs:
         run: pip install --upgrade pip
 
       - name: Run Python script to generate mdFiles.json
+        id: generate_md_json
         run: python generate_file_list.py
+
+      - name: Check if md.json was changed
+        id: check_md_json
+        run: |
+          if git diff --exit-code md.json; then
+            echo "md_changed=false" >> $GITHUB_ENV
+          else
+            echo "md_changed=true" >> $GITHUB_ENV
+        outputs:
+          md_changed: ${{ env.md_changed }}
 
       - name: Commit changes
         run: |
@@ -46,10 +60,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  # Job to deploy to GitHub Pages
   deploy-to-pages:
-    needs: update-mdFiles 
+    needs: update-mdFiles
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.update-mdFiles.outputs.md_changed == 'true' }}
+    if: needs.update-mdFiles.outputs.md_changed == 'true'
 
     steps:
       - name: Checkout the repository
