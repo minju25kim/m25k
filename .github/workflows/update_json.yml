@@ -1,4 +1,4 @@
-name: Update mdFiles.json
+name: Update md.json and Deploy to GitHub Pages
 
 on:
   push:
@@ -6,34 +6,63 @@ on:
       - main
     paths:
       - 'md/**'
+      - 'md.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
+  # Job to update md.json
   update-mdFiles:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0 
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: pip install --upgrade pip
+      - name: Install dependencies
+        run: pip install --upgrade pip
 
-    - name: Run Python script to generate mdFiles.json
-      run: python generate_file_list.py
+      - name: Run Python script to generate mdFiles.json
+        run: python generate_file_list.py
 
-    - name: Commit changes
-      run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "actions@github.com"
-        git add md.json
-        git commit -m "Update mdFiles.json automatically" || echo "No changes to commit"
-        git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add md.json
+          git commit -m "Update mdFiles.json automatically" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-to-pages:
+    needs: update-mdFiles 
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.update-mdFiles.outputs.md_changed == 'true' }}
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'  # Upload the entire repository
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
