@@ -1,0 +1,38 @@
+name: Update mdFiles.json
+
+on:
+  push:
+    paths:
+      - 'public/md/**'  # Trigger when any files in the md folder change
+  pull_request:
+    paths:
+      - 'public/md/**'  # Trigger on pull requests affecting the md folder
+
+jobs:
+  update-mdFiles:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # Use the latest version of Python 3
+
+    - name: Install dependencies
+      run: pip install --upgrade pip
+
+    - name: Run Python script to generate mdFiles.json
+      run: python generate_md_file_list.py
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add public/mdFiles.json
+        git commit -m "Update mdFiles.json automatically"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
