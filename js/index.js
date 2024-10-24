@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mdListContainer = document.getElementById("md-list");
   const contentDiv = document.getElementById("content");
 
-  fetch("mdFiles.json")
+  fetch("public/mdFiles.json")
     .then((response) => response.json())
     .then((mdFiles) => {
       mdFiles.forEach((file) => {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (event) {
           event.preventDefault();
 
-          fetch(`md/${file.name}`)
+          fetch(`public/md/${file.name}`)
             .then((response) => response.text())
             .then((markdown) => {
               if (typeof marked === "function") {
