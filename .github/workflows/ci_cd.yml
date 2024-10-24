@@ -2,9 +2,13 @@ name: Update mdFiles.json
 
 on:
   push:
+    branches:
+      - main  # Run this workflow only on the main branch
     paths:
       - 'public/md/**'  # Trigger when any files in the md folder change
   pull_request:
+    branches:
+      - main  # Run this workflow only on pull requests targeting the main branch
     paths:
       - 'public/md/**'  # Trigger on pull requests affecting the md folder
 
