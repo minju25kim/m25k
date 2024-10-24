@@ -26,7 +26,7 @@ jobs:
     # Step 3: Run Python script to generate md_files.json
     - name: Run Python Script
       run: |
-        python generate_file_list.py
+        python ./script/generate_file_list.py
 
     # Step 4: Commit and push the updated md_files.json
     - name: Commit and Push Changes
