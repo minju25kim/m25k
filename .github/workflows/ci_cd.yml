@@ -8,32 +8,28 @@ on:
       - main
 
 permissions:
-  contents: write  # Grant write access to the contents of the repository
+  contents: write 
 
 jobs:
   update-markdown-list:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         persist-credentials: false
 
-    # Step 2: Set up Python environment
     - name: Set up Python 3
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
-    # Step 3: Run Python script to generate md_files.json
     - name: Run Python Script
       run: |
         python ./script/generate_file_list.py
 
-    # Step 4: Commit and push the updated md_files.json
     - name: Commit and Push Changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -49,11 +45,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: update-markdown-list
     steps:
-    # Step 1: Check out the repository
+
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    # Step 2: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
