@@ -48,7 +48,7 @@ jobs:
             echo "::set-output name=md_changed::false"
           else
             echo "::set-output name=md_changed::true"
-        # Setting the output based on whether md.json changed
+          fi
 
       - name: Commit changes
         run: |
