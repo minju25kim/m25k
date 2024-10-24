@@ -23,7 +23,7 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Run Python Script
+    - name: Run Python Script to Update md_files.json
       run: |
         python ./script/generate_file_list.py
 
@@ -33,16 +33,15 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
+        git add public/md_files.json
         git commit -m "Update md_files.json with new Markdown files" || echo "No changes to commit"
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
         git push origin HEAD:main
 
   deploy:
     runs-on: ubuntu-latest
     needs: update-markdown-list
-    steps:
 
+    steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
@@ -50,4 +49,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
+        publish_dir: ./
+        destination_dir: public
