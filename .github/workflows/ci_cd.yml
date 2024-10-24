@@ -33,6 +33,6 @@ jobs:
         git add .
         git commit -m "Update mdFiles.json automatically"
         git pull
-        git push origin main
+        git push -u origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
