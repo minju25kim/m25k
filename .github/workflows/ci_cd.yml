@@ -14,7 +14,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
-        persist-credentials: false
+        token: ${{ secrets.GITHUB_TOKEN }}  # Use the GITHUB_TOKEN to persist credentials
+        persist-credentials: false  # Ensure credentials are explicitly set with the token
 
     # Step 2: Set up Python environment
     - name: Set up Python 3
@@ -25,7 +26,7 @@ jobs:
     # Step 3: Run Python script to generate md_files.json
     - name: Run Python Script
       run: |
-        python ./script/generate_file_list.py
+        python generate_file_list.py
 
     # Step 4: Commit and push the updated md_files.json
     - name: Commit and Push Changes
@@ -35,7 +36,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add public/md_files.json
-        git commit -m "Update md_files.json with new Markdown files"
+        git commit -m "Update md_files.json with new Markdown files" || echo "No changes to commit"
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
         git push origin HEAD:main
 
   deploy:
