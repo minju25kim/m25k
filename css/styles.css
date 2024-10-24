@@ -6,12 +6,6 @@ body {
     padding: 20px;
 }
 
-ul > li > a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
 #content {
     background-color: white;
     padding: 20px;
