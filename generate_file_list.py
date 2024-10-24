@@ -2,8 +2,8 @@ import os
 import json
 from datetime import datetime
 
-md_directory = os.path.join('public', 'md')
-output_file = os.path.join('public', 'mdFiles.json')
+md_directory = os.path.join('.', 'md')
+output_file = os.path.join('.', 'md.json')
 def format_timestamp(timestamp):
     return datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
 
