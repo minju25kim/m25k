@@ -19,8 +19,9 @@ jobs:
   update-mdFiles:
     runs-on: ubuntu-latest
 
+    # Declare job-level output
     outputs:
-      md_changed: ${{ steps.check_md_json.outputs.md_changed }}  # Job-level output
+      md_changed: ${{ steps.check_md_json.outputs.md_changed }}
 
     steps:
       - name: Checkout the repository
@@ -44,11 +45,10 @@ jobs:
         id: check_md_json
         run: |
           if git diff --exit-code md.json; then
-            echo "md_changed=false" >> $GITHUB_ENV
+            echo "::set-output name=md_changed::false"
           else
-            echo "md_changed=true" >> $GITHUB_ENV
-        outputs:
-          md_changed: ${{ env.md_changed }}  # Corrected step output definition
+            echo "::set-output name=md_changed::true"
+        # Setting the output based on whether md.json changed
 
       - name: Commit changes
         run: |
@@ -62,9 +62,9 @@ jobs:
 
   # Job to deploy to GitHub Pages
   deploy-to-pages:
-    needs: update-mdFiles
+    needs: update-mdFiles  # Waits for the update-mdFiles job to finish
     runs-on: ubuntu-latest
-    if: needs.update-mdFiles.outputs.md_changed == 'true'
+    if: needs.update-mdFiles.outputs.md_changed == 'true'  # Deploy only if md.json was changed
 
     steps:
       - name: Checkout the repository
