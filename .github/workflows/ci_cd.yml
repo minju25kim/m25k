@@ -6,11 +6,6 @@ on:
       - main  # Run this workflow only on the main branch
     paths:
       - 'public/md/**'  # Trigger when any files in the md folder change
-  pull_request:
-    branches:
-      - main  # Run this workflow only on pull requests targeting the main branch
-    paths:
-      - 'public/md/**'  # Trigger on pull requests affecting the md folder
 
 jobs:
   update-mdFiles:
@@ -29,7 +24,7 @@ jobs:
       run: pip install --upgrade pip
 
     - name: Run Python script to generate mdFiles.json
-      run: python generate_md_file_list.py
+      run: python generate_file_list.py
 
     - name: Commit changes
       run: |
