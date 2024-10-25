@@ -4,4 +4,4 @@ draft = false
 title = 'Example Blog'
 +++
 
-# example blog
+# 2025 52weeks coming soon.
