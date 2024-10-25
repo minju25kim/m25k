@@ -20,13 +20,24 @@ title = "all posts"
 limit = 5
 show_more = true
 show_more_text = "See archive..."
-show_more_url = "posts"
+show_more_url = "**/*"
 
 [[entries]]
-title = "posts by category"
+title = "Today I learned"
 
 [entries.post_list]
-section = "posts"
+limit = 5
+section = "til"
 show_more = true
-show_more_text = "See more posts..."
-show_more_url = "posts"
+show_more_text = "See more tils..."
+show_more_url = "til"
+
+[[entries]]
+title = "blog"
+
+[entries.post_list]
+limit = 5
+section = "blog"
+show_more = true
+show_more_text = "See more blogs..."
+show_more_url = "blog"
