@@ -86,7 +86,7 @@
       <description>&lt;p&gt;This post is strange. It also has some custom js.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
+      <title>{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>

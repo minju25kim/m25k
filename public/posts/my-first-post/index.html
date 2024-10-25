@@ -7,7 +7,7 @@
 
   <title>
     
-      
+      {{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}
     
   </title>
 
@@ -32,7 +32,7 @@
         </time>
     </p>
 
-    <h1></h1>
+    <h1>{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}</h1>
 
     
 
