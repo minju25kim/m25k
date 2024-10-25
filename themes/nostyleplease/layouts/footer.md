@@ -1,2 +1,1 @@
-This is footer.
-You can edit this in ../nostyleplease/layouts/footer.md
+[@minju25kim](https://github.com/minju25kim)
