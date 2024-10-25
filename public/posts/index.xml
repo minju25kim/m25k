@@ -6,8 +6,15 @@
     <description>Recent content in Posts on M25K</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Aug 2024 13:34:54 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2024 16:53:51 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Third Post</title>
+      <link>http://localhost:1313/posts/my-third-post/</link>
+      <pubDate>Fri, 25 Oct 2024 16:53:51 +0900</pubDate>
+      <guid>http://localhost:1313/posts/my-third-post/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Test TOC, deatails and styles</title>
       <link>http://localhost:1313/posts/test-toc-and-details/</link>
@@ -84,13 +91,6 @@
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/2020-07-06-strange-post/</guid>
       <description>&lt;p&gt;This post is strange. It also has some custom js.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
