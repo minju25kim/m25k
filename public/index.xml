@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>M25K</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content on M25K</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Oct 2024 18:47:44 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Blog</title>
-      <link>http://localhost:1313/blog/example-blog/</link>
+      <link>https://example.org/blog/example-blog/</link>
       <pubDate>Fri, 25 Oct 2024 18:47:44 +0900</pubDate>
-      <guid>http://localhost:1313/blog/example-blog/</guid>
+      <guid>https://example.org/blog/example-blog/</guid>
       <description>&lt;h1 id=&#34;example-blog&#34;&gt;example blog&lt;/h1&gt;</description>
     </item>
     <item>
       <title>How to Set Up Hugo Blog</title>
-      <link>http://localhost:1313/til/how-to-set-up-hugo-blog/</link>
+      <link>https://example.org/til/how-to-set-up-hugo-blog/</link>
       <pubDate>Fri, 25 Oct 2024 18:47:12 +0900</pubDate>
-      <guid>http://localhost:1313/til/how-to-set-up-hugo-blog/</guid>
+      <guid>https://example.org/til/how-to-set-up-hugo-blog/</guid>
       <description></description>
     </item>
   </channel>
