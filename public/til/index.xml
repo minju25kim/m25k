@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tils on M25K</title>
+    <link>http://localhost:1313/til/</link>
+    <description>Recent content in Tils on M25K</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Oct 2024 18:47:12 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up Static Hugo Blog</title>
+      <link>http://localhost:1313/til/how-to-set-up-hugo-blog/</link>
+      <pubDate>Fri, 25 Oct 2024 18:47:12 +0900</pubDate>
+      <guid>http://localhost:1313/til/how-to-set-up-hugo-blog/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;hugo&lt;/a&gt;&#xA;&lt;a href=&#34;https://github.com/riggraz/no-style-please&#34;&gt;theme: nostylesplease&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;steps&#34;&gt;steps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;install hugo&lt;/li&gt;&#xA;&lt;li&gt;clone theme&lt;/li&gt;&#xA;&lt;li&gt;add post&lt;/li&gt;&#xA;&lt;li&gt;publish/connect to github pages&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;learning&#34;&gt;learning&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;how to use md&lt;/li&gt;&#xA;&lt;li&gt;how to set folder/directory/files structure.&lt;/li&gt;&#xA;&lt;li&gt;toml&lt;/li&gt;&#xA;&lt;li&gt;yml to publish/deploy github pages&lt;/li&gt;&#xA;&lt;li&gt;how to set favicon&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
