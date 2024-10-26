@@ -24,14 +24,14 @@ show_more_text = "See more tils..."
 show_more_url = "til"
 
 [[entries]]
-title = "blog"
+title = "52weeks"
 
 [entries.post_list]
 limit = 5
-section = "blog"
+section = "52weeks"
 show_more = true
-show_more_text = "See more blogs..."
-show_more_url = "blog"
+show_more_text = "See more 52weeks..."
+show_more_url = "52weeks"
 
 [[entries]]
 title = "all posts"
