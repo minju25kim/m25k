@@ -11,7 +11,11 @@ url = "https://www.linkedin.com/in/minju25kim/"
 
 [[entries.entries]]
 title = "twitter"
-url = "https://twitter.com/cleaner_than_u"
+url = "https://twitter.com/cleaner_than_u/"
+
+[[entries.entries]]
+title = "youtube"
+url = "https://www.youtube.com/@minju25kim/"
 
 [[entries]]
 title = "Today I learned"
@@ -34,10 +38,20 @@ show_more_text = "See more 52weeks..."
 show_more_url = "52weeks"
 
 [[entries]]
+title = "monthly"
+
+[entries.post_list]
+limit = 5
+section = "monthly"
+show_more = true
+show_more_text = "See more monthly..."
+show_more_url = "monthly"
+
+[[entries]]
 title = "all posts"
 
 [entries.post_list]
 limit = 5
 show_more = true
 show_more_text = "See archive..."
-show_more_url = "**/*"
+show_more_url = "content"

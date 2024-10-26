@@ -1,11 +1,11 @@
 +++
 date = '{{ .Date }}'
 draft = false
-title = 'Week{{ .File.ContentBaseName }} '
+title = 'week{{ .File.ContentBaseName }} '
 +++
 
 <!-- 
-hugo new --kind 52 content/52weeks/#.md
+hugo new --kind 52weeks content/52weeks/#.md
 -->
 
 ✅✅✅✅✅
