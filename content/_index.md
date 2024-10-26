@@ -3,4 +3,4 @@ title =  ""
 date = 2022-08-25T21:30:04+08:00
 draft = false
 +++
-Hi, this is m25k blog.
+1년은 52주. 시간은 멈추지 않아. 항상말조심.
