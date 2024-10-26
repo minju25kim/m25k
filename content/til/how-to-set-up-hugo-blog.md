@@ -5,6 +5,7 @@ title = 'How to Set Up Static Hugo Blog'
 +++
 
 [hugo](https://gohugo.io/getting-started/quick-start/)
+
 [theme: nostylesplease](https://github.com/riggraz/no-style-please)
 
 ## steps
