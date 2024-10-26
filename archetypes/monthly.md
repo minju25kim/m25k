@@ -5,7 +5,8 @@ title = '{{ .File.ContentBaseName }}월 '
 +++
 
 <!-- 
-hugo new --kind monthly content/monthly/#.md
+$ hugo new --kind monthly content/monthly/#.md
+![ALT-TEXT](IMG-LINK)
 -->
 
 ✅✅✅✅✅
