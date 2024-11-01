@@ -1,1 +1,1 @@
-[@m25k](https://minju25kim.github.io/m25k/)
+[m25k](https://minju25kim.github.io/m25k/)

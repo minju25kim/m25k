@@ -17,6 +17,18 @@ url = "https://twitter.com/cleaner_than_u/"
 title = "youtube"
 url = "https://www.youtube.com/@minju25kim/"
 
+[[entries.entries]]
+title = "instagram"
+url = "https://www.instagram.com/alswnzla__/"
+
+[[entries.entries]]
+title = "instagram(running)"
+url = "https://www.instagram.com/run.02.14/"
+
+[[entries.entries]]
+title = "send email"
+url = "mailto:minju25kim@gmail.com"
+
 [[entries]]
 title = "Today I learned"
 
