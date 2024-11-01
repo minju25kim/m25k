@@ -24,18 +24,28 @@ title = "Today I learned"
 limit = 5
 section = "til"
 show_more = true
-show_more_text = "See more tils..."
+show_more_text = "See more til..."
 show_more_url = "til"
 
 [[entries]]
-title = "52weeks"
+title = "daily"
 
 [entries.post_list]
 limit = 5
-section = "52weeks"
+section = "daily"
 show_more = true
-show_more_text = "See more 52weeks..."
-show_more_url = "52weeks"
+show_more_text = "See more daily..."
+show_more_url = "daily"
+
+[[entries]]
+title = "weekly"
+
+[entries.post_list]
+limit = 5
+section = "weekly"
+show_more = true
+show_more_text = "See more weekly..."
+show_more_url = "weekly"
 
 [[entries]]
 title = "monthly"

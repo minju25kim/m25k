@@ -5,7 +5,7 @@ title = 'week{{ .File.ContentBaseName }} '
 +++
 
 <!-- 
-hugo new --kind 52weeks content/52weeks/#.md
+hugo new --kind weekly content/weekly/#.md
 -->
 
 ✅✅✅✅✅

@@ -15,9 +15,6 @@ $ hugo new --kind monthly content/monthly/#.md
 
 🆕🆕
 
-### 목표
-- 
-
 ### {{ .File.ContentBaseName }}월에는 무슨일이 있었나요?
 
 ### {{ .File.ContentBaseName }}월에 구매한 물건/서비스
