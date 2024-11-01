@@ -1,7 +1,8 @@
-# m25k
+# M25K
 
-## goal
+## 목표
 - md를 어디까지 활용할 수 있을까?에 대한 의문점 해소.
+- node module 없고 간단하고 깔끔한 스트럭쳐를 유지하는 것.
 - 2024...2025...2100...2200...3000 끊임없는 개인 아카이브를 목표로 함.
 - 일상과 직업을 양분하여 콘텐츠를 관리한다는 것은 힘에 부치는 일임을 드디어 깨닫고 하나로 통합하려고 함.
 
@@ -22,11 +23,12 @@
 
 ---
 
-# m25k(chatGPT translation)
+# M25K ( chatGPT translation + mine )
 
 ## Goal
 
 - To explore the full potential of markdown and answer the question: How far can we take it?
+- Without node_module, keep its simple structure.
 - To create a continuous personal archive for 2024, 2025, 2100, 2200, 3000, and beyond.
 - Having realized that dividing content between personal and professional life is exhausting, I’m now working to unify them into one.
 
