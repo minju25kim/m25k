@@ -7,8 +7,9 @@
   <title>
     {{ if not .IsHome }} {{ .Title }} {{ else }} {{ $.Site.Title }} {{ end }}
   </title>
-  {{- if site.Params.analytics.google.SiteVerificationTag }}
-  <meta name="google-site-verification" content="_-skKgzBDeyVUnaVpnHxP6LQheBVTeVsqey8NLnosVw" />  <link
+  <meta name="google-site-verification" content="_-skKgzBDeyVUnaVpnHxP6LQheBVTeVsqey8NLnosVw" />  
+  <meta name="naver-site-verification" content="f8d9b63c88cbcddd6072f31ddcf5cd19917a43ff" />
+  <link
     rel="shortcut icon"
     type="image/x-icon"
     href="{{ $.Site.Params.favicon | relURL }}"
