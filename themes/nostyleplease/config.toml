@@ -35,3 +35,6 @@
     back_home_text = ".."
     date_format = "2006-01-02-Mon"
     isListGroupByDate = false
+  [params.analytics]
+    [google]
+      SiteVerificationTag = "google04bdda96852aa08b.html"

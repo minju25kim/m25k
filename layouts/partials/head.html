@@ -7,7 +7,9 @@
   <title>
     {{ if not .IsHome }} {{ .Title }} {{ else }} {{ $.Site.Title }} {{ end }}
   </title>
-
+  {{- if site.Params.analytics.google.SiteVerificationTag }}
+  <meta name="google-site-verification" content="{{ site.Params.analytics.google.SiteVerificationTag }}">
+  {{- end }}
   <link
     rel="shortcut icon"
     type="image/x-icon"
