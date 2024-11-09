@@ -30,16 +30,6 @@ title = "send email"
 url = "mailto:minju25kim@gmail.com"
 
 [[entries]]
-title = "Today I learned"
-
-[entries.post_list]
-limit = 5
-section = "til"
-show_more = true
-show_more_text = "See more til..."
-show_more_url = "til"
-
-[[entries]]
 title = "daily"
 
 [entries.post_list]
@@ -70,10 +60,11 @@ show_more_text = "See more monthly..."
 show_more_url = "monthly"
 
 [[entries]]
-title = "all posts"
+title = "review"
 
 [entries.post_list]
 limit = 5
+section = "review"
 show_more = true
-show_more_text = "See all posts..."
-show_more_url = "content"
+show_more_text = "See more review..."
+show_more_url = "review"
