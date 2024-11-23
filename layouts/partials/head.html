@@ -16,10 +16,12 @@
   <link
     rel="icon"
     href="{{ $.Site.Params.favicon | relURL }}"
+    type="image/svg+xml"
   />
   <link
     rel="apple-touch-icon"
     href="{{ $.Site.Params.favicon | relURL }}"
+    sizes="180x180"
   />
   {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not
   hugo.IsProduction)) }} {{ $sass := resources.Get "css/main.scss" }} {{ $style
