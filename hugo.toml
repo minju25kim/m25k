@@ -1,4 +1,4 @@
 baseURL = 'https://minju25kim.github.io/m25k/'
-languageCode = 'en-us'
+languageCode = 'ko-KR'
 title = 'm25k'
 theme = 'nostyleplease'
