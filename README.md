@@ -20,6 +20,12 @@
 ### review(비정기)
 - 리뷰를 할 것이다. 그게 무엇이든지...
 
+### engkor(비정기)
+- 영어와 한국어의 번역 혹은 그 반대
+
+### travel(비정기)
+- 글과 사진으로 남기는 여행 후기.
+
 ---
 
 # m25k
@@ -43,3 +49,9 @@
   
 ### Review (Occasional)
 - I’ll review it, whatever it involves.
+
+### engkor(Occasional)
+- Translations done by myself.
+
+### travel(Occasional)
+- Writing and photos from my trips.

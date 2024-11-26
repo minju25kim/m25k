@@ -26,6 +26,10 @@ title = "instagram(running)"
 url = "https://www.instagram.com/run.02.14/"
 
 [[entries.entries]]
+title = "old blog"
+url = "https://blog.naver.com/alswnzla__"
+
+[[entries.entries]]
 title = "send email"
 url = "mailto:minju25kim@gmail.com"
 
@@ -68,3 +72,23 @@ section = "review"
 show_more = true
 show_more_text = "See more review..."
 show_more_url = "review"
+
+[[entries]]
+title = "travel"
+
+[entries.post_list]
+limit = 5
+section = "travel"
+show_more = true
+show_more_text = "See more travel..."
+show_more_url = "travel"
+
+[[entries]]
+title = "engkor"
+
+[entries.post_list]
+limit = 5
+section = "engkor"
+show_more = true
+show_more_text = "See more engkor..."
+show_more_url = "engkor"
