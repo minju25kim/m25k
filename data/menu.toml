@@ -5,8 +5,9 @@ url = "info"
 [[entries]]
 title = "daily"
 url = "daily"
+
 [entries.post_list]
-limit = 5
+limit = 3
 section = "daily"
 show_more = true
 show_more_text = "See more daily..."
@@ -17,7 +18,7 @@ title = "weekly"
 url = "weekly"
 
 [entries.post_list]
-limit = 5
+limit = 3
 section = "weekly"
 show_more = true
 show_more_text = "See more weekly..."
@@ -28,7 +29,7 @@ title = "monthly"
 url="monthly"
 
 [entries.post_list]
-limit = 5
+limit = 3
 section = "monthly"
 show_more = true
 show_more_text = "See more monthly..."
@@ -39,7 +40,7 @@ title = "review"
 url = "review"
 
 [entries.post_list]
-limit = 5
+limit = 3
 section = "review"
 show_more = true
 show_more_text = "See more review..."
@@ -50,7 +51,7 @@ title = "travel"
 url = "travel"
 
 [entries.post_list]
-limit = 5
+limit = 3
 section = "travel"
 show_more = true
 show_more_text = "See more travel..."
@@ -61,7 +62,7 @@ title = "engkor"
 url = "engkor"
 
 [entries.post_list]
-limit = 5
+limit = 3
 section = "engkor"
 show_more = true
 show_more_text = "See more engkor..."
