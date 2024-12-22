@@ -1,41 +1,10 @@
 [[entries]]
 title = "info"
-
-[[entries.entries]]
-title = "github"
-url = "https://github.com/minju25kim/"
-
-[[entries.entries]]
-title = "linkedin"
-url = "https://www.linkedin.com/in/minju25kim/"
-
-[[entries.entries]]
-title = "twitter(pause)"
-url = "https://twitter.com/cleaner_than_u/"
-
-[[entries.entries]]
-title = "youtube"
-url = "https://www.youtube.com/@minju25kim/"
-
-[[entries.entries]]
-title = "instagram"
-url = "https://www.instagram.com/alswnzla__/"
-
-[[entries.entries]]
-title = "instagram(running)"
-url = "https://www.instagram.com/run.02.14/"
-
-[[entries.entries]]
-title = "old blog"
-url = "https://blog.naver.com/alswnzla__"
-
-[[entries.entries]]
-title = "send email"
-url = "mailto:minju25kim@gmail.com"
+url = "info"
 
 [[entries]]
 title = "daily"
-
+url = "daily"
 [entries.post_list]
 limit = 5
 section = "daily"
@@ -45,6 +14,7 @@ show_more_url = "daily"
 
 [[entries]]
 title = "weekly"
+url = "weekly"
 
 [entries.post_list]
 limit = 5
@@ -55,6 +25,7 @@ show_more_url = "weekly"
 
 [[entries]]
 title = "monthly"
+url="monthly"
 
 [entries.post_list]
 limit = 5
@@ -65,6 +36,7 @@ show_more_url = "monthly"
 
 [[entries]]
 title = "review"
+url = "review"
 
 [entries.post_list]
 limit = 5
@@ -75,6 +47,7 @@ show_more_url = "review"
 
 [[entries]]
 title = "travel"
+url = "travel"
 
 [entries.post_list]
 limit = 5
@@ -85,6 +58,7 @@ show_more_url = "travel"
 
 [[entries]]
 title = "engkor"
+url = "engkor"
 
 [entries.post_list]
 limit = 5
